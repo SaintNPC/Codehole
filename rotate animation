@@ -1,0 +1,33 @@
+using System.Collections;
+using System.Collections.Generic;
+using UnityEngine;
+
+public class rotateY : MonoBehaviour
+{
+    public float rotateSpeed;
+    public bool x;
+    public bool y;
+    public bool z;
+    // Start is called before the first frame update
+    void Start()
+    {
+
+    }
+
+    // Update is called once per frame
+    void Update()
+    {
+        if (x)
+        {
+            this.transform.Rotate(rotateSpeed * Time.deltaTime, 0, 0);
+        }
+        if (y)
+        {
+            this.transform.Rotate(0, rotateSpeed * Time.deltaTime, 0);
+        }
+        if (z)
+        {
+            this.transform.Rotate(0, 0, rotateSpeed * Time.deltaTime);
+        }
+    }
+}
